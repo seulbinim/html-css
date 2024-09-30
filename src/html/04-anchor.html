@@ -10,16 +10,31 @@
     <a name="start"></a>
     <h1 id="heading">하이퍼링크 요소</h1>
     <!-- 웹사이트(URL)로 하이퍼링크 : 절대경로 -->
-    <a href="https://likelion.net/school">태킷 프론트엔드 스쿨(부트캠프)</a
-    ><br />
+    <p>
+      <a href="https://likelion.net/school">태킷 프론트엔드 스쿨(부트캠프)</a>
+    </p>
     <!-- target 속성의 값으로 _blank를 지정하면 새창, 새탭에 링크 결과 보기  -->
-    <a href="https://github.com/seulbinim" target="_blank">슬비님의 Github</a>
+    <!-- target 속성의 값으로 _blank로 설정되어 있을 경우에는 rel 속성의 값으로 nooperer noreferrer를 지정해야 함. -->
+    <a href="https://github.com/seulbinim" target="_blank"
+      ><p>슬비님의 Github</p></a
+    >
+    <p>
+      <a href="/">과제 저장소 - <a href="/">자기소개</a></a>
+    </p>
     <br />
-    <a href="https://www.naver.com/" target="blank" title="네이버로 이동합니다."
+    <a
+      href="https://www.naver.com/"
+      target="_blank"
+      title="네이버로 이동합니다."
+      rel="noopener noreferrer"
       >네이버</a
     >
     <br />
-    <a href="https://www.daum.net/" target="blank" title="다음으로 이동합니다."
+    <a
+      href="https://www.daum.net/"
+      target="_blank"
+      title="다음으로 이동합니다."
+      rel="noopener noreferrer"
       >다음</a
     >
     <br />
