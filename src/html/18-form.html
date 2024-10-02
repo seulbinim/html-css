@@ -12,9 +12,14 @@
       <fieldset>
         <legend>input 요소를 활용한 다양한 양식 만들기</legend>
         <!-- 한줄 글상자 (text) -->
-        <p><input type="text" /></p>
+        <p><input type="text" name="user-name" id="user-name" required /></p>
         <!-- 검색어 입력상자 (search) -->
         <p><input type="search" name="search" id="search" /></p>
+        <!-- 이메일 입력 서식 (email) -->
+        <p><input type="email" name="user-email" id="user-email" required /></p>
+        <!-- 숫자 입력 서식 (tel) -->
+        <p><input type="tel" name="user-phone" id="user-phone" required /></p>
+        <button type="submit">전송</button>
       </fieldset>
     </form>
   </body>
