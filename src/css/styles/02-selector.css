@@ -1,0 +1,24 @@
+/* 전체 선택자 */
+* {
+  color: orange;
+}
+
+/* 요소 선택자 */
+p{
+  color: blue;
+}
+
+/* class 선택자 */
+.likelion{
+  color: green;
+}
+
+/* id 선택자 */
+#techit{
+  color: red;
+}
+
+/* 속성 선택자 */
+[title]{
+  color: pink;
+}
