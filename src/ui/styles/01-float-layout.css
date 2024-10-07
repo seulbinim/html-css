@@ -1,0 +1,79 @@
+@import "./../../common/reset.css";
+
+/* 영역별 배경 색상 지정 */
+.header{
+  background-color: yellow;
+}
+
+.visual{
+  background-color: pink;
+}
+
+.main{
+  background-color: lime;
+}
+
+.slogan{
+  background-color: skyblue;
+}
+
+.footer{
+  background-color: orange;
+}
+
+
+.header, .visual, .main, .slogan,.footer{
+  width: 940px;
+  inline-size: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+}
+
+.header, .visual, .slogan,.footer{
+  height: 10vh;
+  block-size: 10vh;
+}
+
+.main{
+  box-sizing: border-box;
+  /* border: 1px solid currentColor; */
+  display: flow-root;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-inline: 15px;
+}
+
+.group{
+  background-color: purple;
+  color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-inline: 15px;
+  height: 60vh;
+  block-size: 60vh;
+}
+
+.group1{
+  float: left;
+  float: inline-start;
+  inline-size: 250px;
+}
+
+.group2{
+  float: left;
+  float: inline-start;
+  width: 380px;
+  inline-size: 380px;
+}
+
+.group3{
+  float: left;
+  float: inline-start;
+  width: 190px;
+  inline-size: 190px;
+}
+
+.slogan{
+  clear: both;
+}
