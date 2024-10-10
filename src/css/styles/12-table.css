@@ -41,8 +41,12 @@ body{
     background-color: sandybrown;
   }
 
-  thead, th, td{
-    border: 1px solid currentColor;
+  /* table 요소의 border를 상속시켜서 스타일링 */
+  thead, tbody, tr, th, td{
+    border: inherit;
+  }
+
+  th, td{
     padding: 1em;
   }
 
