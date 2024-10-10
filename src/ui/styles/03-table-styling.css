@@ -1,0 +1,132 @@
+@import "./../../common/best-reset.css";
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:root{
+  --deep-blue : #24388D;
+  --light-blue : #919BC6;
+  --silver: #878787;
+
+  --spacing-sm: 10px;
+  --spacing-base: 12px;
+  --spacing-md: 16px;
+}
+
+/* 기본 스타일 */
+body{
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+.ediya-container{
+  margin: var(--spacing-md);
+}
+
+.ediya-heading{
+  --title-text-color: var(--deep-blue, #24388D);
+  --subtitle-text-color: var(--silver, #878787);
+  margin-block: 20px;
+
+  h1{
+    color: var(--title-text-color);
+  }
+
+  p{
+    color: var(--subtitle-text-color);
+  }
+}
+
+/* 썸네일 컴포넌트 */
+.thumbnail-card{
+  /* 썸네일 컴포넌트 지역 변수 */
+  --size: 60px;
+  --gap: var(--spacing-sm, 10px);
+  --thumbnail-text-color: var(--silver, #878787);
+
+  display: flow-root;
+
+  .thumbnail-card__img{
+    inline-size: var(--size);
+    block-size: var(--size);
+    float: inline-start;
+    margin-inline-end: var(--gap); 
+  }
+
+  .thumbnail-card__caption{
+    color: var(--thumbnail-text-color);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+
+    strong{
+      font-size: 0.9375rem;
+      font-weight: 400;
+    }
+  }
+  
+}
+
+/* 이디야 뉴스 */
+.ediya-news{
+  --text-color: var(--deep-blue, #24388D);
+  --border-thick: 2px;
+  --border-thin: 1px;
+  --border-color: var(--deep-blue);
+  --cell-spacing-head: var(--spacing-md);
+  --cell-spacing-body: var(--spacing-md);
+
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  inline-size: 680px;
+  color: var(--text-color);
+  border-block: var(--border-thick) solid currentColor;
+  /* box-shadow: 1px 1px 0 0 #000, -1px -1px 0 0 #000; */
+
+  .ediya-news__number{
+    inline-size: 46px;
+    text-align: center;
+  }
+
+  .ediya-news__content{
+    inline-size: 579px;
+  }
+
+  .ediya-news__date{
+    inline-size: 85px;
+    text-align: center;
+  }
+
+  tbody tr{
+    border-block-start: var(--border-thin) solid currentColor;
+  }
+
+  th{
+    font-size: 0.875rem;
+    padding-block: var(--cell-spacing-head);
+  }
+
+  td{
+    font-size: 0.75rem;
+    padding-block: var(--cell-spacing-body);
+
+    /* 이디야 소식 관련 내용이 포함 된 셀을 제외하고 모든 td 요소 선택 */
+    &:not(:nth-child(2)){
+      text-align: center;
+      font-size: 0.75rem;
+      vertical-align: top;
+    }
+  }
+
+  .thumbnail-card__caption strong{
+    color: var(--deep-blue, #24388D);
+  }
+}
