@@ -5,7 +5,6 @@
 .coffee-lab {
   inline-size: 1440px;
   margin-inline: auto;
-  /* background-color: yellow; */
 
   .coffee-lab__headline {
     text-align: center;
@@ -39,11 +38,11 @@
     --size: 392px;
 
     list-style: '';
-    padding-inline-start: 0;
-    /* inline-size: cale(var(--size) * 2); */
+    padding-block-end: 100px;
+    padding-inline-start: 100px;
     text-align: center;
     font-size: 0;
-    padding-inline-start: 100px;
+    background: skyblue;
 
     .coffee-lab__item{
       display: inline-block;
@@ -56,20 +55,15 @@
     }
     
     a {
-      position: absolute;
-      inset-block-end: 0;
-      inset-inline-start: 50%;
-      /* margin-inline-start: -25%; */
-      transform:translate(-50%, -50px);
+      display: inline-block;
+      padding-block-start: 300px;
       text-decoration: none;
-      font-size: 32px;
       color: #fff;
+      font-size: 32px;
       font-weight: 700;
       line-height: 1.4;
       letter-spacing: 3.2px;
       text-transform: uppercase;
-      white-space: nowrap;
-      /* line-height: 44.8px; */
 
       &::after{
         content: '';
