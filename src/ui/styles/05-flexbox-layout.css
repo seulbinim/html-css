@@ -12,23 +12,49 @@
   margin-block: 0;
   inline-size: 60%;
   margin-inline: auto;
-  gap: 1.5em;
+  background-color: tomato;
+  /* gap: 1.5em; */
 }
 
 .item{
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   flex-flow: column nowrap;
   gap: 1em;
-  min-inline-size: 150px;
+  /* min-inline-size: 150px; */
+  box-sizing: border-box;
+  padding-inline: 5px;
+  flex-basis: 100%;
+
+  @media (min-width: 480px){
+    flex-basis: 50%;
+  }
+
+  @media (min-width: 600px){
+    flex-basis: 33.333%;
+  }
+
+  @media (min-width: 800px){
+    flex-basis: 25%;
+  }
+  
+  @media (min-width: 1000px){
+    flex-basis: 20%;
+  }
 }
 
 .thumb{
   background-color: aqua;
+  aspect-ratio: 1/1;
+  /* border: 1px solid currentColor; */
 }
 
 .image{
   width: 100%;
   inline-size: 100%;
   vertical-align: middle;
+}
+
+.title{
+  flex-basis: 40px;
 }
