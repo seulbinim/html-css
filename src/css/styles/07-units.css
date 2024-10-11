@@ -2,6 +2,7 @@
 
 body{
   font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 50px 50px 200px 50px;
 }
 
 /* px 단위 */
@@ -36,6 +37,16 @@ body{
 /* vw 단위 */
 .unit-vw{
   font-size: 3vw;
+}
+
+/* number 단위 */
+.unit-number{
+  font-size: 10px;
+  line-height: 1;
+
+  p{
+    font-size: 20px;
+  }
 }
 
 /* CSS의 색상 값 */
