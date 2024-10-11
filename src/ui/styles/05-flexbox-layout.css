@@ -13,40 +13,20 @@
   inline-size: 60%;
   margin-inline: auto;
   background-color: tomato;
-  /* gap: 1.5em; */
+  gap: 1.5em;
 }
 
 .item{
-  /* flex: 1; */
+  flex: 1;
   display: flex;
   flex-flow: column nowrap;
   gap: 1em;
-  /* min-inline-size: 150px; */
-  box-sizing: border-box;
-  padding-inline: 5px;
-  flex-basis: 100%;
-
-  @media (min-width: 480px){
-    flex-basis: 50%;
-  }
-
-  @media (min-width: 600px){
-    flex-basis: 33.333%;
-  }
-
-  @media (min-width: 800px){
-    flex-basis: 25%;
-  }
-  
-  @media (min-width: 1000px){
-    flex-basis: 20%;
-  }
+  min-inline-size: 150px;
 }
 
 .thumb{
   background-color: aqua;
   aspect-ratio: 1/1;
-  /* border: 1px solid currentColor; */
 }
 
 .image{
