@@ -1,4 +1,4 @@
-@import "./../../common/mordern-reset.css";
+/* @import "./../../common/mordern-reset.css"; */
 
 div:not(#awebChromeHelper){
   font-size: 3rem;
@@ -6,8 +6,31 @@ div:not(#awebChromeHelper){
   padding: 10px;
 }
 
+/* 요소 박스 위치 지정 (percentage value) */
+.percentage-value{
+  border: 1px solid currentColor;
+  margin: 1em !important;
+  padding: 10px !important;
+  font-size: 1rem !important;
+  width: 200px;
+  inline-size: 200px;
+  
+  p{
+    padding: 20%;
+    margin: 0;
+    border: inherit;
+    position: relative;
+    left: 50%;
+    inset-inline-start: 50%;
+    background-color: tomato;
+  }
+}
+
+
 .static{
   background: yellow;
+  margin-top: 50px;
+  margin-block-start: 50px;
 }
 
 .fixed{
@@ -19,7 +42,7 @@ div:not(#awebChromeHelper){
 
 .relative-wrapper{
   position: relative;
-  inset-block-start: 50px;
+  inset-block-start: 250px;
   inset-inline-start: 50px;
 }
 .absolute-wrapper{
