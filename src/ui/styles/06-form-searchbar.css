@@ -67,7 +67,7 @@ select {
   align-items: center;
   gap: 48px;
 
-  &:has(input:focus){
+  &:focus-within{
     box-shadow: 0px 4px 4px 0px rgba(68, 131, 63, 0.15);
   }
 
@@ -80,10 +80,6 @@ select {
 
     .search{
       flex: 1;
-
-      input{
-        outline: none;
-      }
     }
 
     button{

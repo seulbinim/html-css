@@ -1,4 +1,18 @@
 
+/* 포커스 스타일링 */
+:focus{
+  outline: none;
+}
+
+:focus-visible{
+  box-shadow: 0 0 2px 2px #03CC5C;;
+  border-radius: 4px;
+}
+
+input:focus-visible{
+  box-shadow: none;
+}
+
 /* 숨김 콘텐츠 */
 .sr-only{
   position: absolute;
@@ -11,3 +25,4 @@
   white-space: nowrap;
   border-width: 0;
 }
+
