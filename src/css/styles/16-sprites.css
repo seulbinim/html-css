@@ -11,7 +11,6 @@ h1, h2 {
 
 .sns-list{
   margin-block-start: 1.25rem;
-  background-color: yellow;
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
@@ -20,7 +19,6 @@ h1, h2 {
     display: block;
     inline-size: 1.875rem;
     aspect-ratio: 1/1;
-    background-color: pink;
     background-image: url("./../../assets/sprite/sns.png");
   }
 
