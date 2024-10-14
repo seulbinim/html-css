@@ -1,0 +1,65 @@
+@import "./../../common/base.css";
+@import "./../../common/a11y.css";
+
+:root{
+  --dark-gray: #333;
+  --white: #fff;
+  --gray: #999;
+  --green: #03CF5D;
+}
+
+/* 임시 스타일 */
+body {
+  margin: 50px;
+}
+
+/* 로고 컴포넌트 */
+.brand{
+  margin: 0;
+  font-size: 1em;
+
+  a, svg, img{
+    display: block;
+  }
+}
+
+/* 링크 컴포넌트 (target="_blank") */
+.anchor--blank{
+  --text-color: var(--dark-gray, #333);
+
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* 체크박스 컴포넌트 (checkbox) */
+.checkbox{
+  background-color: yellow;
+
+  .checkbox__label{
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .checkbox--area{
+    fill: var(--white, #fff);
+  }
+
+  .checkbox--border{
+    fill: var(--gray, #999);
+  }
+
+  .checkbox--mark{
+    fill: var(--gray, #999);
+  }
+
+  .checkbox__input:checked + .checkbox__label .checkbox--area,
+  .checkbox__input:checked + .checkbox__label .checkbox--border{
+    fill: var(--green, #03CF5D)
+  }
+
+  .checkbox__input:checked + .checkbox__label .checkbox--mark{
+    fill: var(--white, #fff);
+  }
+}
