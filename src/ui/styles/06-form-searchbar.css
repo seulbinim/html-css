@@ -25,7 +25,9 @@ select {
 
 /* 검색 버튼 컴포넌트 */
 .button--icon-circle{
-  all: unset;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
   
   svg{
     display: block;
@@ -63,21 +65,25 @@ select {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 12px;
+  gap: 48px;
+
+  &:has(input:focus){
+    box-shadow: 0px 4px 4px 0px rgba(68, 131, 63, 0.15);
+  }
 
   .brand{
     flex: 0 0 auto;
   }
 
   .search-form{
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 1;
-    align-items: center;
-    gap: 16px;
+    display: contents;
 
     .search{
       flex: 1;
+
+      input{
+        outline: none;
+      }
     }
 
     button{
