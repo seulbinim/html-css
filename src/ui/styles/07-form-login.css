@@ -2,10 +2,23 @@
 @import "./../../common/a11y.css";
 
 :root{
+  /*  색상 */
   --dark-gray: #333;
   --white: #fff;
   --gray: #999;
   --green: #03CF5D;
+
+  /* 아이콘 크기 */
+  --size-sm: 0.75rem;
+  --size-base: 1rem;
+  --size-md: 1.25rem;
+  --size-lg: 1.5rem;
+
+}
+
+/* 기본 박스 사이징 */
+*, *::before, *::after{
+  box-sizing: border-box;
 }
 
 /* 임시 스타일 */
@@ -33,10 +46,21 @@ body {
 
 /* 체크박스 컴포넌트 (checkbox) */
 .checkbox{
-  background-color: yellow;
+  position: relative;
+
+  .checkbox__input{
+    --icon-size: var(--size-lg, 1.5rem);
+
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    inline-size: var(--icon-size);
+    aspect-ratio: 1/1;
+    appearance: none;
+  }
 
   .checkbox__label{
-    background-color: pink;
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -63,3 +87,14 @@ body {
     fill: var(--white, #fff);
   }
 }
+
+/* 입력 서식 컴포넌트 (input) : 숨김 레이블 유형 */
+.input{
+  background-color: yellow;
+
+  .input__input{
+    border: 1px solid red;
+    inline-size: 100%;
+  }
+}
+
