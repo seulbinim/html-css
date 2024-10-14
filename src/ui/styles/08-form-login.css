@@ -1,167 +1,46 @@
+@import "./../../common/mini-reset.css";
 @import "./../../common/base.css";
 @import "./../../common/a11y.css";
+@import "./07-form-components.css";
 
-:root{
-  /*  색상 */
-  --dark-gray: #333;
-  --white: #fff;
-  --gray: #999;
-  --green: #03CF5D;
-  --silver: #dadada;
+.container{
+  padding: 0 1.25rem;
 
-  /* 아이콘 크기 */
-  --size-sm: 0.75rem;
-  --size-base: 1rem;
-  --size-md: 1.25rem;
-  --size-lg: 1.5rem;
+  .brand{
+    inline-size: 14.375rem;
+    margin-inline: auto;
+    margin-block: 4.375rem 2.8125rem;
 
-  /* 글자 크기 */
-  --text-sm: 0.75rem;
-  --text-base: 0.875rem;
-  --text-md: 1rem;
-  --text-lg: 1.25rem;
-
-}
-
-/* 기본 박스 사이징 */
-*, *::before, *::after{
-  box-sizing: border-box;
-}
-
-/* 임시 스타일 */
-body {
-  margin: 50px;
-}
-
-/* 로고 컴포넌트 */
-.brand{
-  margin: 0;
-  font-size: 1em;
-
-  a, svg, img{
-    display: block;
-  }
-}
-
-/* 링크 컴포넌트 (target="_blank") */
-.anchor--blank{
-  --text-color: var(--dark-gray, #333);
-
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-/* 체크박스 컴포넌트 (checkbox) */
-.checkbox{
-  position: relative;
-
-  .checkbox__input{
-    --icon-size: var(--size-lg, 1.5rem);
-
-    position: absolute;
-    inset-inline-start: 0;
-    inset-block-start: 0;
-    margin: 0;
-    inline-size: var(--icon-size);
-    aspect-ratio: 1/1;
-    appearance: none;
+    @media (min-width: 48rem) {
+      margin-block: 6.25rem 3.125rem;
+    }
   }
 
-  .checkbox__label{
+  .login-form{
     display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
+    flex-flow: column nowrap;
+    gap: 0.625rem;
 
-  .checkbox--area{
-    fill: var(--white, #fff);
-  }
+    @media (min-width: 48rem) {
+      inline-size: 31.25rem;
+      padding: 0 1.25rem; 
+      margin-inline: auto;
+    }
 
-  .checkbox--border{
-    fill: var(--gray, #999);
-  }
+    .flex-wrapper{
+      order: 1;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 0.25rem;
 
-  .checkbox--mark{
-    fill: var(--gray, #999);
-  }
+      .checkbox{
+        margin-inline-end: auto;
+      }
+    }
 
-  .checkbox__input:checked + .checkbox__label .checkbox--area,
-  .checkbox__input:checked + .checkbox__label .checkbox--border{
-    fill: var(--green, #03CF5D)
-  }
-
-  .checkbox__input:checked + .checkbox__label .checkbox--mark{
-    fill: var(--white, #fff);
-  }
-}
-
-/* 입력 서식 컴포넌트 (input) : 숨김 레이블 유형 */
-.input{
-  --border-color: var(--silver, #dadada); 
-  --text-color: var(--dark-gray, #333);
-  --text-size: var(--text-base, 0.875rem);
-
-  font-size: var(--text-size); 
-
-  .input__input{
-    border: 1px solid var(--border-color);
-    inline-size: 100%;
-    block-size: 3rem;
-    padding: 0.875rem;
-
-    &:user-invalid + .input__error-message span{
-      visibility: visible;
+    button{
+      margin-block-start: 0.625rem;
     }
   }
-
-  .input__error-message{
-    color: #FF1414;
-    font-size: 0.75rem;
-    margin: 0.5rem 0 0 0;
-    
-    span{
-      visibility: hidden;
-    }
-  }
-}
-
-/* 스위치 컴포넌트 (checkbox) */
-.switch{
-  position: relative;
-  font-size: 0.875rem;
-  font-weight: 700;
-
-  .switch__input{
-    position: absolute;
-    inset-inline-start: 0;
-    inset-block-start: 0;
-    margin: 0;
-    inline-size: 2em;
-    block-size: 1rem;
-    appearance: none;
-  }
-
-  .switch__label{
-    display: block;
-    inline-size: 2em;
-    text-align: end;
-
-    &::after{
-      content: 'OFF';
-    }
-  }
-
-  .switch__input:checked + .switch__label::after{
-    content: 'ON';
-    color: var(--green);
-  }
-}
-
-/* 버튼 컴포넌트 */
-.button--primary{
-  background-color: var(--green);
-  color: var(--white);
-  block-size: 3.5rem;
-  padding: 1rem;
-  border: 0;
 }

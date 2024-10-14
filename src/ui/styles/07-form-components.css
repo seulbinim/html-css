@@ -8,6 +8,7 @@
   --gray: #999;
   --green: #03CF5D;
   --silver: #dadada;
+  --black: #121212;
 
   /* 아이콘 크기 */
   --size-sm: 0.75rem;
@@ -28,9 +29,9 @@
   box-sizing: border-box;
 }
 
-/* 임시 스타일 */
-body {
-  margin: 50px;
+/* body 기본 스타일 */
+body{
+  color: var(--black);
 }
 
 /* 로고 컴포넌트 */
@@ -111,6 +112,11 @@ body {
 
     &:user-invalid + .input__error-message span{
       visibility: visible;
+    }
+
+    &:focus{
+      border: 1px solid var(--green);
+      background-color: #e9f0fd;
     }
   }
 
