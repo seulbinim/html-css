@@ -9,6 +9,8 @@
   --green: #03CF5D;
   --silver: #dadada;
   --black: #121212;
+  --light-blue: #e9f0fd;
+  --red: #FF1414;
 
   /* 아이콘 크기 */
   --size-sm: 0.75rem;
@@ -31,7 +33,9 @@
 
 /* body 기본 스타일 */
 body{
-  color: var(--black);
+  --text-color: var(--black, #121212);
+
+  color: var(--text-color);
 }
 
 /* 로고 컴포넌트 */
@@ -98,9 +102,11 @@ body{
 
 /* 입력 서식 컴포넌트 (input) : 숨김 레이블 유형 */
 .input{
-  --border-color: var(--silver, #dadada); 
+  --border-color: var(--silver, #dadada);
+  --focus-bg-color: var(--light-blue, #e9f0fd); 
   --text-color: var(--dark-gray, #333);
   --text-size: var(--text-base, 0.875rem);
+  --warning-text-color: var(--red, #FF1414);
 
   font-size: var(--text-size); 
 
@@ -116,12 +122,12 @@ body{
 
     &:focus{
       border: 1px solid var(--green);
-      background-color: #e9f0fd;
+      background-color: var(--focus-bg-color);
     }
   }
 
   .input__error-message{
-    color: #FF1414;
+    color: var(--warning-text-color);
     font-size: 0.75rem;
     margin: 0.5rem 0 0 0;
     
@@ -133,6 +139,9 @@ body{
 
 /* 스위치 컴포넌트 (checkbox) */
 .switch{
+  --switch-active-color: var(--green, #03CF5D);
+  --switch-inactive-color: var(--gray, #999);
+
   position: relative;
   font-size: 0.875rem;
   font-weight: 700;
@@ -151,6 +160,7 @@ body{
     display: block;
     inline-size: 2em;
     text-align: end;
+    color: var(--switch-inactive-label-color);
 
     &::after{
       content: 'OFF';
@@ -159,14 +169,17 @@ body{
 
   .switch__input:checked + .switch__label::after{
     content: 'ON';
-    color: var(--green);
+    color: var(--switch-active-color);
   }
 }
 
 /* 버튼 컴포넌트 */
 .button--primary{
-  background-color: var(--green);
-  color: var(--white);
+  --button-bg-color: var(--green, #03CF5D);
+  --button-text-color: var(--white, #fff);
+
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
   block-size: 3.5rem;
   padding: 1rem;
   border: 0;
