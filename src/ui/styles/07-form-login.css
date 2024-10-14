@@ -129,3 +129,35 @@ body {
     }
   }
 }
+
+/* 스위치 컴포넌트 (checkbox) */
+.switch{
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  .switch__input{
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    inline-size: 2em;
+    block-size: 1rem;
+    appearance: none;
+  }
+
+  .switch__label{
+    display: block;
+    inline-size: 2em;
+    text-align: end;
+
+    &::after{
+      content: 'OFF';
+    }
+  }
+
+  .switch__input:checked + .switch__label::after{
+    content: 'ON';
+    color: var(--green);
+  }
+}
