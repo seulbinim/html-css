@@ -5,7 +5,7 @@
 }
 
 :focus-visible{
-  box-shadow: 0 0 2px 2px #03CC5C;;
+  box-shadow: 0 0 2px 2px rgb(224, 86, 86, 0.85);
   border-radius: 4px;
 }
 

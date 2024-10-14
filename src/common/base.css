@@ -1,3 +1,8 @@
+/* 폼 요소 초기화 - 상속 */
+input, button, select, textarea{
+  font: inherit;
+}
+
 /* 기본 스타일 */
 body{
   font-family: "Pretendard Variable", Pretendard, sans-serif;
