@@ -1,0 +1,25 @@
+@import "./../../common/base.css";
+
+h1{
+  background-color: teal;
+  color: white;
+  padding: 1rem;
+}
+
+.multi-column{
+  inline-size: 800px;
+  border: 1px solid red;
+  padding: 1.5rem;
+  margin-inline: auto;
+  columns: 4;
+  column-gap: 40px;
+  column-rule: 1px solid green;
+
+  .span-all{
+    display: block;
+    background-color: salmon;
+    padding: 1rem;
+    column-span: all;
+    margin-block: 1rem;
+  }
+}
