@@ -14,7 +14,7 @@ body{
   min-inline-size: 1000px;
   display: grid;
   grid-template-columns: [container-start] 50px [content-start] repeat(12, 1fr) [content-end] 50px [container-end];
-  grid-template-rows: 10% 5% 60% 10% 15%;
+  grid-template-rows: 10% 10% 60% 10% 10%;
   column-gap: 24px;
   block-size: 100%;
 
