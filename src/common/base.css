@@ -3,7 +3,13 @@ input, button, select, textarea{
   font: inherit;
 }
 
-/* 기본 스타일 */
+/* 기본 박스 사이징 설정 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+/* 본문 기본 글꼴 지정 */
 body{
   font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 50px;
 }
