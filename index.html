@@ -4,75 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>태킷 프론트엔드 스쿨 12기</title>
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+
+    <link rel="stylesheet" href="./src/common/index.css" />
   </head>
   <body>
     <!-- 메타 데이터 요소 및 open graph 추가 설명 필요! -->
-    <h1>HTML/CSS</h1>
-    <h2>HTML</h2>
-    <ul>
-      <li><a href="./src/html/01-basic-structure.html">HTML 기본구조</a></li>
-      <li><a href="./src/html/02-heading-paragraph.html">제목과 단락</a></li>
-      <li><a href="./src/html/03-image-figure.html">이미지와 피규어</a></li>
-      <li><a href="./src/html/04-anchor.html">하이퍼링크</a></li>
-      <li>
-        <a href="./src/html/05-unordered-ordered-list.html">비순서형, 순서형 목록</a>
-      </li>
-      <li><a href="./src/html/06-definition-list.html">정의형 목록</a></li>
-      <li>
-        <a href="./src/html/07-phrasing-element.html">프레이징 요소</a>
-      </li>
-      <li><a href="./src/html/08-blockquote-br.html">인용문과 줄바꿈</a></li>
-      <li><a href="./src/html/09-table.html">테이블</a></li>
-      <li><a href="./src/html/10-container-element.html">컨테이너 요소</a></li>
-      <li><a href="./src/html/11-section-main.html">섹션과 메인 요소</a></li>
-      <li><a href="./src/html/12-text-level-element.html">텍스트 레벨 요소</a></li>
-      <li><a href="./src/html/13-address.html">address 요소</a></li>
-      <li><a href="./src/html/14-picture-source.html">picture와 source 요소</a></li>
-      <li><a href="./src/html/15-video-iframe.html">video 및 iframe 요소</a></li>
-      <li><a href="./src/html/16-iframe-object.html">iframe, object 요소</a></li>
-      <li><a href="./src/html/17-map-area.html">map과 area 요소</a></li>
-      <li><a href="./src/html/18-form-input.html">폼 (input) 요소</a></li>
-      <li><a href="./src/html/19-form-button.html">폼 (button) 요소</a></li>
-      <li><a href="./src/html/20-form-select-textarea.html">폼 (select, textarea) 요소</a></li>
-      <li><a href="./src/html/21-dialog.html">dialog 요소</a></li>
-      <li><a href="./src/html/22-details-summary.html">details, summary 요소</a></li>
-      <li><a href="./src/html/23-script.html">script 요소</a></li>
-      <li><a href="./src/html/24-interactive-attribute.html">유저 인터렉션 속성</a></li>
-    </ul>
-    <h2>CSS</h2>
-    <ul>
-      <li><a href="./src/css/01-css-basic.html">CSS 기본</a></li>
-      <li><a href="./src/css/02-selector.html">CSS 선택자</a></li>
-      <li><a href="./src/css/03-specificity.html">상속, 겹침, 우선순위</a></li>
-      <li><a href="./src/css/04-reset.html">CSS 초기화</a></li>
-      <li><a href="./src/css/05-box-model.html">CSS 박스 모델</a></li>
-      <li><a href="./src/css/06-float.html">Float 속성</a></li>
-      <li><a href="./src/css/07-units.html">CSS 단위</a></li>
-      <li><a href="./src/css/08-custom-properties.html">사용자 정의 속성(변수)</a></li>
-      <li><a href="./src/css/09-nesting.html">CSS 중첩</a></li>
-      <li><a href="./src/css/10-background.html">CSS 배경(Background)</a></li>
-      <li><a href="./src/css/11-position.html">Position 속성</a></li>
-      <li><a href="./src/css/12-table.html">테이블 스타일링</a></li>
-      <li><a href="./src/css/13-scroll-behavior.html">스크롤 스타일링</a></li>
-      <li><a href="./src/css/14-flexbox.html">플렉스 박스</a></li>
-      <li><a href="./src/css/15-media-query.html">미디어 쿼리</a></li>
-      <li><a href="./src/css/16-sprites.html">CSS 스프라이트(Sprites)</a></li>
-      <li><a href="./src/css/17-multi-column.html">멀티 컬럼(Multi Column)</a></li>
-      <li><a href="./src/css/18-grid.html">CSS Grid</a></li>
-    </ul>
+    <div class="container">
+      <h1>HTML/CSS</h1>
 
-    <h2>UI</h2>
-    <ul>
-      <li><a href="./src/ui/01-float-layout.html">Float 레이아웃 (webCafe)</a></li>
-      <li><a href="./src/ui/02-float-term.html">Float UI (webCafe)</a></li>
-      <li><a href="./src/ui/03-table-styling.html">테이블 UI (이디야)</a></li>
-      <li><a href="./src/ui/04-background-cafew.html">배경 스타일링 (CafeW)</a></li>
-      <li><a href="./src/ui/05-flexbox-layout.html">플렉스 박스 레이아웃(유동형)</a></li>
-      <li><a href="./src/ui/06-form-searchbar.html">폼 검색 서식(SearchBar)</a></li>
-      <li><a href="./src/ui/07-form-components.html">폼 컴포넌트(Components)</a></li>
-      <li><a href="./src/ui/08-form-login.html">폼 로그인(Naver Login)</a></li>
-      <li><a href="./src/ui/09-masonry.html">Masonry 레이아웃</a></li>
-      <li><a href="./src/ui/10-grid-layout.html">그리드 레이아웃</a></li>
-    </ul>
+      <div class="column">
+        <h2>HTML</h2>
+        <ul>
+          <li><a href="./src/html/01-basic-structure.html">HTML 기본구조</a></li>
+          <li><a href="./src/html/02-heading-paragraph.html">제목과 단락</a></li>
+          <li><a href="./src/html/03-image-figure.html">이미지와 피규어</a></li>
+          <li><a href="./src/html/04-anchor.html">하이퍼링크</a></li>
+          <li>
+            <a href="./src/html/05-unordered-ordered-list.html">비순서형, 순서형 목록</a>
+          </li>
+          <li><a href="./src/html/06-definition-list.html">정의형 목록</a></li>
+          <li>
+            <a href="./src/html/07-phrasing-element.html">프레이징 요소</a>
+          </li>
+          <li><a href="./src/html/08-blockquote-br.html">인용문과 줄바꿈</a></li>
+          <li><a href="./src/html/09-table.html">테이블</a></li>
+          <li><a href="./src/html/10-container-element.html">컨테이너 요소</a></li>
+          <li><a href="./src/html/11-section-main.html">섹션과 메인 요소</a></li>
+          <li><a href="./src/html/12-text-level-element.html">텍스트 레벨 요소</a></li>
+          <li><a href="./src/html/13-address.html">address 요소</a></li>
+          <li><a href="./src/html/14-picture-source.html">picture와 source 요소</a></li>
+          <li><a href="./src/html/15-video-iframe.html">video 및 iframe 요소</a></li>
+          <li><a href="./src/html/16-iframe-object.html">iframe, object 요소</a></li>
+          <li><a href="./src/html/17-map-area.html">map과 area 요소</a></li>
+          <li><a href="./src/html/18-form-input.html">폼 (input) 요소</a></li>
+          <li><a href="./src/html/19-form-button.html">폼 (button) 요소</a></li>
+          <li><a href="./src/html/20-form-select-textarea.html">폼 (select, textarea) 요소</a></li>
+          <li><a href="./src/html/21-dialog.html">dialog 요소</a></li>
+          <li><a href="./src/html/22-details-summary.html">details, summary 요소</a></li>
+          <li><a href="./src/html/23-script.html">script 요소</a></li>
+          <li><a href="./src/html/24-interactive-attribute.html">유저 인터렉션 속성</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>CSS</h2>
+        <ul>
+          <li><a href="./src/css/01-css-basic.html">CSS 기본</a></li>
+          <li><a href="./src/css/02-selector.html">CSS 선택자</a></li>
+          <li><a href="./src/css/03-specificity.html">상속, 겹침, 우선순위</a></li>
+          <li><a href="./src/css/04-reset.html">CSS 초기화</a></li>
+          <li><a href="./src/css/05-box-model.html">CSS 박스 모델</a></li>
+          <li><a href="./src/css/06-float.html">Float 속성</a></li>
+          <li><a href="./src/css/07-units.html">CSS 단위</a></li>
+          <li><a href="./src/css/08-custom-properties.html">사용자 정의 속성(변수)</a></li>
+          <li><a href="./src/css/09-nesting.html">CSS 중첩</a></li>
+          <li><a href="./src/css/10-background.html">CSS 배경(Background)</a></li>
+          <li><a href="./src/css/11-position.html">Position 속성</a></li>
+          <li><a href="./src/css/12-table.html">테이블 스타일링</a></li>
+          <li><a href="./src/css/13-scroll-behavior.html">스크롤 스타일링</a></li>
+          <li><a href="./src/css/14-flexbox.html">플렉스 박스</a></li>
+          <li><a href="./src/css/15-media-query.html">미디어 쿼리</a></li>
+          <li><a href="./src/css/16-sprites.html">CSS 스프라이트(Sprites)</a></li>
+          <li><a href="./src/css/17-multi-column.html">멀티 컬럼(Multi Column)</a></li>
+          <li><a href="./src/css/18-grid.html">CSS Grid</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>UI</h2>
+        <ul>
+          <li><a href="./src/ui/01-float-layout.html">Float 레이아웃 (webCafe)</a></li>
+          <li><a href="./src/ui/02-float-term.html">Float UI (webCafe)</a></li>
+          <li><a href="./src/ui/03-table-styling.html">테이블 UI (이디야)</a></li>
+          <li><a href="./src/ui/04-background-cafew.html">배경 스타일링 (CafeW)</a></li>
+          <li><a href="./src/ui/05-flexbox-layout.html">플렉스 박스 레이아웃(유동형)</a></li>
+          <li><a href="./src/ui/06-form-searchbar.html">폼 검색 서식(SearchBar)</a></li>
+          <li><a href="./src/ui/07-form-components.html">폼 컴포넌트(Components)</a></li>
+          <li><a href="./src/ui/08-form-login.html">폼 로그인(Naver Login)</a></li>
+          <li><a href="./src/ui/09-masonry.html">Masonry 레이아웃</a></li>
+          <li><a href="./src/ui/10-grid-layout.html">그리드 레이아웃</a></li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
