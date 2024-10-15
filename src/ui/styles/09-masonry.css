@@ -6,7 +6,26 @@
 
 
 .masonry-layout{
-  columns: 2;
+  columns: 1;
+
+  @media (min-width: 640px) {
+    columns: 2;
+  }
+  @media (min-width: 768px) {
+    columns: 3;
+  }
+
+  @media (min-width: 1024px) {
+    columns: 4;
+  }
+  
+  @media (min-width: 1280px) {
+    columns: 5;
+  }
+
+  @media (min-width: 1536px) {
+    columns: 6;
+  }
   
   figure{
     margin: 2rem 0;
