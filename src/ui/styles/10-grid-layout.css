@@ -1,0 +1,61 @@
+@import "./../../common/base.css";
+
+html, body{
+  block-size: 100%;
+}
+
+body{
+  margin: 0;
+}
+
+/* 그리드 컨테이너 */
+.container{
+  background-color: yellow;
+  min-inline-size: 1200px;
+  margin-inline: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(74px, 1fr));
+  grid-template-rows: 10% 5% 60% 10% 15%;
+  column-gap: 24px;
+  block-size: 100%;
+
+  .header{
+    background-color: gold;
+    grid-row: span 2;
+    grid-column: span 12;
+    order: -1;
+  }
+
+  .navigation{
+    background-color: lightgreen;
+    grid-column: span 3;
+    order: 1;
+  }
+
+  .main{
+    background-color: lightskyblue;
+    grid-column: span 7;
+  }
+
+  .sidebar{
+    background-color: lightsalmon;
+    grid-column: span 2;
+    order: -1;
+  }
+
+  .slogan{
+    background-color: lightslategray;
+    grid-column: span 12;
+    order: 1;
+  }
+
+  .footer{
+    background-color: lightpink;
+    grid-column: span 12;
+    order: 1;
+  }
+
+
+
+
+}
