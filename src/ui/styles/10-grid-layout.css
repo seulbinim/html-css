@@ -11,48 +11,56 @@ body{
 /* 그리드 컨테이너 */
 .container{
   background-color: yellow;
-  min-inline-size: 1200px;
-  margin-inline: 24px;
+  min-inline-size: 1000px;
   display: grid;
-  grid-template-columns: repeat(12, minmax(74px, 1fr));
+  grid-template-columns: [container-start] 50px [content-start] repeat(12, 1fr) [content-end] 50px [container-end];
   grid-template-rows: 10% 5% 60% 10% 15%;
   column-gap: 24px;
   block-size: 100%;
 
   .header{
     background-color: gold;
-    grid-row: span 2;
-    grid-column: span 12;
-    order: -1;
+    /* grid-row: 1 / 3;
+    grid-column: 1 / -1;
+    order: -1; */
+    grid-column: content;
   }
 
   .navigation{
     background-color: lightgreen;
-    grid-column: span 3;
-    order: 1;
+    /* grid-column: 11 / 13;
+    grid-row: 3 / 4;
+    order: 1; */
+    grid-column: container;
   }
-
+  
   .main{
     background-color: lightskyblue;
-    grid-column: span 7;
+    /* grid-column: 4 / 11;
+    grid-row: 2 / 4; */
+    grid-column: 2 / span 10;
   }
-
+  
   .sidebar{
     background-color: lightsalmon;
+    /* grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    order: -1; */
     grid-column: span 2;
-    order: -1;
   }
 
   .slogan{
     background-color: lightslategray;
-    grid-column: span 12;
-    order: 1;
+    /* grid-column: span 12;
+    order: 1; */
+    grid-column: content;
   }
 
   .footer{
     background-color: lightpink;
-    grid-column: span 12;
-    order: 1;
+    /* grid-column: span 12;
+    order: 1; */
+    grid-column: 1 / -1 ;
   }
 
 
