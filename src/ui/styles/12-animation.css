@@ -7,6 +7,7 @@ button {
   margin-block: 1rem;
 }
 
+/* Position을 활용한 햄버거 버튼 애니메이션 */
 .button--burger {
   inline-size: 24px;
   block-size: 24px;
@@ -63,6 +64,46 @@ button {
   }
 }
 
+/* Flexbox를 활용한 햄버거 버튼 애니메이션 */
+.button--burger-flex {
+  inline-size: 100px;
+  block-size: 100px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  .burger-bar {
+    inline-size: 100%;
+    block-size: 20%;
+    background-color: currentColor;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    justify-content: center;
+
+    .burger-bar-top {
+      translate: 0 100%;
+      rotate: -45deg;
+    }
+
+    .burger-bar-middle {
+      translate: 120% 0;
+    }
+
+    .burger-bar-bottom {
+      translate: 0 -100%;
+      rotate: 45deg;
+    }
+  }
+}
+
+/* 로딩 애니메이션 */
 @keyframes spinner {
   0% {
     rotate: 0deg;
@@ -72,6 +113,7 @@ button {
   }
 }
 
+/* SVG 로딩 애니메이션 */
 .loading-spinner {
   inline-size: 48px;
   block-size: 48px;
