@@ -1,0 +1,25 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/base.css";
+
+.card {
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  position: relative;
+
+  img {
+    aspect-ratio: 1 / 0.67;
+    object-fit: cover;
+  }
+
+  figcaption {
+    background: rgba(0 0 0 / 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    color: var(--white);
+    position: absolute;
+    inset-inline: 1rem;
+    inset-block-end: 1rem;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+}
