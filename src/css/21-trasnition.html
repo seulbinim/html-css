@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition | Techit</title>
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+
+    <link rel="stylesheet" href="./styles/21-trasnition.css" />
+    <script type="module">
+      const button = document.querySelector(".button--animation");
+      const box = document.querySelector(".transition-box");
+
+      button.addEventListener("click", () => {
+        box.classList.toggle("is--animation");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Transition을 활용한 애니메이션</h1>
+
+    <button type="button" class="button--animation">Go! 애니메이션</button>
+    <div class="transition-box">Transition을 활용한 애니메이션</div>
+  </body>
+</html>
