@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition | Techit</title>
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+
+    <link rel="stylesheet" href="./styles/21-trasnition-animation.css" />
+    <script type="module">
+      // Transiton
+      const buttonTransition = document.querySelector(".button--transition");
+      const TransitionBox = document.querySelector(".transition-box");
+
+      buttonTransition.addEventListener("click", () => {
+        TransitionBox.classList.toggle("is--animation");
+      });
+
+      // Transform
+      const buttonTransform = document.querySelector(".button--transform");
+      const TransformBox = document.querySelector(".transform-box");
+
+      buttonTransform.addEventListener("click", () => {
+        TransformBox.classList.toggle("is--animation");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>CSS 애니메이션</h1>
+    <h2>Transition 속성을 활용한 애니메이션</h2>
+
+    <button type="button" class="button--transition">Go! Transition</button>
+    <div class="transition-box">Transition을 활용한 애니메이션</div>
+
+    <button type="button" class="button--transform">Go! Transform</button>
+    <div class="transform-box">Transform을 활용한 애니메이션</div>
+
+    <h2>Animation 속성을 활용한 애니메이션</h2>
+    <div class="fade-box">CSS 애니메이션</div>
+  </body>
+</html>
