@@ -1,20 +1,19 @@
-
 /* 포커스 스타일링 */
-:focus{
+:focus {
   outline: none;
 }
 
-:focus-visible{
+:focus-visible {
   box-shadow: 0 0 2px 2px rgb(224, 86, 86, 0.85);
   border-radius: 4px;
 }
 
-:is(input[type="email"], input[type="password"], input[type="text"]):focus-visible{
+input:is([type="email"], [type="password"], [type="text"], [type="search"]):focus-visible {
   box-shadow: none;
 }
 
 /* 숨김 콘텐츠 */
-.sr-only{
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -25,4 +24,3 @@
   white-space: nowrap;
   border-width: 0;
 }
-
