@@ -6,6 +6,16 @@ h2 {
   margin-block: 1rem;
 }
 
+@keyframes fadeEffect {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 /* CSS Animation */
 .fade-box {
   inline-size: 150px;
@@ -14,6 +24,26 @@ h2 {
   background-color: var(--red);
   text-align: center;
   align-content: center;
+  margin-block: 1rem;
+
+  @media (prefers-reduced-motion) {
+    animation-play-state: paused;
+  }
+
+  &.is--animation {
+    /* animation-name: fadeEffect;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running; */
+    animation: faseEffect 4s forwards infinite alternate ease-in-out running;
+
+    &.fade-box2 {
+      animation-delay: 2s;
+    }
+  }
 }
 
 .transition-box {
