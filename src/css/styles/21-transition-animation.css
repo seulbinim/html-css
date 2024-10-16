@@ -38,7 +38,7 @@ h2 {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     animation-play-state: running; */
-    animation: faseEffect 4s forwards infinite alternate ease-in-out running;
+    animation: fadeEffect 4s forwards infinite alternate ease-in-out running;
 
     &.fade-box2 {
       animation-delay: 2s;
