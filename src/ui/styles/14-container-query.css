@@ -15,5 +15,45 @@ p:not(.card__description) {
 }
 
 /* 카드 컴포넌트 */
+.card-wrapper {
+  container: card-wrapper / inline-size;
+  /* inline-size: 400px; */
+}
+
+.card {
+  display: grid;
+  grid-template: "image" "description" / minmax(300px, 1fr);
+  border: 1px solid var(--gray);
+  background-color: var(--light-silver);
+  padding: 1rem;
+  gap: 1rem;
+
+  .card__image {
+    grid-area: image;
+    text-align: center;
+
+    .card__link {
+      text-decoration: none;
+      color: inherit;
+      font-style: italic;
+    }
+  }
+
+  .card__description {
+    grid-area: description;
+  }
+}
+
+@container (inline-size > 30rem) {
+  .card {
+    grid-template: "image description" / 1fr 2fr;
+  }
+}
+
+@container (inline-size > 50rem) {
+  .card {
+    grid-template: "image description" / 2fr 1fr;
+  }
+}
 
 /* 카드 레이아웃 */
