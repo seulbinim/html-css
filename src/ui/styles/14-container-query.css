@@ -22,7 +22,7 @@ p:not(.card__description) {
 
 .card {
   display: grid;
-  grid-template: "image" "description" / minmax(300px, 1fr);
+  grid-template: "image" "description" / minmax(260px, 1fr);
   border: 1px solid var(--gray);
   background-color: var(--light-silver);
   padding: 1rem;
@@ -47,13 +47,45 @@ p:not(.card__description) {
 @container (inline-size > 30rem) {
   .card {
     grid-template: "image description" / 1fr 2fr;
+
+    .card__description {
+      /* 크기 변경 확인 필요 */
+      /* font-size: clamp(12px, 10cqi, 30px); */
+    }
   }
 }
 
 @container (inline-size > 50rem) {
   .card {
     grid-template: "image description" / 2fr 1fr;
+
+    .card__description {
+      font-size: clamp(14px, 2cqi, 24px);
+    }
   }
 }
 
 /* 카드 레이아웃 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card-floating {
+  display: flow-root;
+
+  .card-wrapper {
+    inline-size: 60%;
+    float: inline-start;
+    margin: 0 1rem 1rem 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+
+    &:nth-of-type(1) {
+      margin-block-start: 0;
+    }
+  }
+}
