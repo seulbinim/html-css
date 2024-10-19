@@ -1,6 +1,20 @@
 @import "./../../common/modern-reset.css";
 @import "./../../common/base.css";
 
+/* 다크모드 설정 */
+/* @media (prefers-color-scheme: dark) {
+  ...
+} */
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  color: light-dark(var(--gray), var(--white));
+  background-color: light-dark(var(--white), var(--gray));
+}
+
 h1,
 p {
   line-height: 1.5;
@@ -17,16 +31,16 @@ p:not(.card__description) {
 /* 카드 컴포넌트 */
 .card-wrapper {
   container: card-wrapper / inline-size;
-  /* inline-size: 400px; */
 }
 
 .card {
   display: grid;
   grid-template: "image" "description" / minmax(260px, 1fr);
   border: 1px solid var(--gray);
-  background-color: var(--light-silver);
   padding: 1rem;
   gap: 1rem;
+  color: light-dark(var(--gray), var(--gray));
+  background-color: light-dark(var(--green), var(--pink));
 
   .card__image {
     grid-area: image;
